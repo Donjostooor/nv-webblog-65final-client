@@ -2,6 +2,7 @@
     <div>
       <h1>All Books</h1>
       <div>จํานวนหนังสือในหน้านี้ {{ books.length }}</div>
+      <button v-on:click="navigateTo('/book')">CreateBook</button>
       <div v-for="book in books" v-bind:key="book.id">
         <div>BookID : {{ book.id }}</div>
         <div>title : {{ book.title }}</div>
@@ -12,12 +13,12 @@
         <div>price : {{ book.price }}</div>
         <p>
           <button v-on:click="navigateTo('/book/' + book.id)">
-            ดูข้อมูลหนังสือ
+            ShowBook
           </button>
           <button v-on:click="navigateTo('/book/edit/' + book.id)">
-            แก้ไขข้อมูลหนังสือ
+            EditBook
           </button>
-          <button v-on:click="deleteUser(book)">ลบข้อมูลหนังสือ</button>
+          <button v-on:click="deleteUser(book)">DeleteBook</button>
         </p>
         <hr />
       </div>

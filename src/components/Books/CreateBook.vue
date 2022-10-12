@@ -9,6 +9,7 @@
             <p>category :<input type="text" v-model="book.category" /></p>
             <p>price :<input type="text" v-model="book.price" /></p>
             <p><button type="submit">Create Book</button></p>
+            <p><button v-on:click="navigateTo('/books')">Cancel</button></p>
         </form>
         <hr>
         <div>
