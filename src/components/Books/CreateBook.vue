@@ -8,7 +8,7 @@
             <p>publisher :<input type="text" v-model="book.publisher" /></p>
             <p>category :<input type="text" v-model="book.category" /></p>
             <p>price :<input type="text" v-model="book.price" /></p>
-            <p><button type="submit">Create Book</button></p>
+            <p><button type="submit" v-on:click="navigateTo('/books')">Create Book</button></p>
             <p><button v-on:click="navigateTo('/books')">Cancel</button></p>
         </form>
         <hr>
